@@ -1,0 +1,7 @@
+{
+  "name": "managerWork",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
