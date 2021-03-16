@@ -16,4 +16,7 @@ export class LoginPage implements OnInit {
   ingresar() {
     this.router.navigate(['/home'])
   }
+  toRegister() {
+    this.router.navigate(['/register'])
+  }
 }

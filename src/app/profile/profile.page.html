@@ -7,11 +7,11 @@
             </ion-button>
         </ion-buttons>
         <ion-title>
-            Inicio</ion-title>
+            Perfil</ion-title>
 
     </ion-toolbar>
 </ion-header>
-<ion-menu side="start" menuId="first" contentId="main">
+<ion-menu side="start" menuId="second" contentId="main">
     <ion-header>
         <ion-toolbar color="secondary">
             <ion-title>Menu</ion-title>
@@ -20,10 +20,10 @@
     <ion-content color="primary">
         <ion-list>
             <ion-item color="secondary">
-                <div class="color-texto-menu">Inicio</div>
+                <div class="color-texto-menu" (click)="irHome()">Inicio</div>
             </ion-item>
             <ion-item color="secondary">
-                <div class="color-texto-menu" (click)="irProfile()">Perfil</div>
+                <div class="color-texto-menu">Perfil</div>
             </ion-item>
             <ion-item color="secondary" (click)="irLogin()">
                 <div class="color-texto-menu">Cerrar Sesion</div>
@@ -47,18 +47,27 @@
             <div id="datosPerfil">
                 <p>Nickname</p>
                 <p>Clase</p>
+                <p>Estado de clase</p>
                 <p>Lv.</p>
             </div>
-        </div>
-        <div>
-            <p id="verPerfil" (click)="irProfile2()">Ver perfil</p>
         </div>
 
     </div>
     <div id="proyectos">
-        <ion-button color="tertiary" (click)="newProject()">
-            <ion-icon name="add-outline"></ion-icon>
-            <p id="nuevoProyecto">Proyectos</p>
-        </ion-button>
+        <div id="optionsProfile">
+            <div class="optionProfile">
+                <p>Tareas incompletas</p>
+            </div>
+            <div class="optionProfile">
+                <p>Tareas completadas</p>
+            </div>
+
+            <div class="optionProfile">
+                <p>Amigos</p>
+            </div>
+            <div class="optionProfile">
+                <p>Registrados</p>
+            </div>
+        </div>
     </div>
 </ion-content>

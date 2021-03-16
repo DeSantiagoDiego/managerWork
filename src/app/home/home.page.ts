@@ -17,7 +17,7 @@ export class HomePage {
     this.menu.open('first');
   }
 
-  openEnd() {
+  /*openEnd() {
     this.menu.open('end');
   }
 
@@ -25,9 +25,25 @@ export class HomePage {
     this.menu.enable(true, 'custom');
     this.menu.open('custom');
   }
+  */
   irLogin() {
     this.menu.close();
+    //this.menu.enable(false, 'first');
     this.router.navigate(['/login'])
   }
 
+  irProfile(){
+    this.menu.enable(false, 'first');
+    this.menu.close('first');
+    this.router.navigate(['/profile'])
+  }
+  irProfile2(){
+    this.menu.enable(false, 'first');
+    this.menu.close('first');
+    this.router.navigate(['/profile'])
+  }
+
+  newProject(){
+    this.router.navigate(['/new-project'])
+  }
 }

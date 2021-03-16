@@ -1,0 +1,58 @@
+<ion-header>
+    <ion-toolbar color="secondary">
+        <ion-title>ManagerWork</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content color="primary">
+    <div id="register" class="scroll" scrollX="true">
+        <p>Nickname</p>
+        <input type="text" [(ngModel)]="nombre" (ngModelChange)="cambiaNombre($event)">
+        <p>Correo</p>
+        <input type="password">
+        <p>Clase</p>
+        <ion-item>
+            <ion-select [(ngModel)]="clase" (ngModelChange)="cambiaClase($event)" placeholder="Selecccionar clase          " interface="popover" class="custom-options">
+                <ion-select-option value="Mujer">Mujer</ion-select-option>
+                <ion-select-option value="Hombre">Hombre</ion-select-option>
+            </ion-select>
+        </ion-item>
+        <p>Contraseña</p>
+        <input type="password">
+        <p>Confirmar Contraseña</p>
+        <input type="text">
+        <p>Genero</p>
+        <ion-item>
+            <ion-select placeholder="Selecccionar genero          " interface="popover" class="custom-options">
+                <ion-select-option value="f">Mujer</ion-select-option>
+                <ion-select-option value="m">Hombre</ion-select-option>
+            </ion-select>
+        </ion-item>
+
+
+        <div id="perfil" class="scroll" scrollX="true">
+            <div id="imagenPerfil">
+                <div id="avatar">
+                    <ion-avatar>
+                        <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+                    </ion-avatar>
+                </div>
+
+
+                <div id="datosPerfil">
+                    <p id="Nickname">Nickname</p>
+                    <p id="Clase">Clase</p>
+                    <p>Lv.0</p>
+                </div>
+            </div>
+
+        </div>
+
+
+        <button>
+        <p id="ingresar">Registrarse</p>
+      </button>
+        <p class="opcionesLogin" (click)="toIngresar()">¿Ya tienes una cuenta?, Ingresa aqui!</p>
+
+    </div>
+</ion-content>
