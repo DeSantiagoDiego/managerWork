@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MenuController } from '@ionic/angular';
 import { Router } from '@angular/router';
+import { AuthenticationService } from '../shared/authentication-service';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class HomePage {
 
-  constructor(private menu: MenuController, private router: Router) { }
+  constructor(private menu: MenuController, private router: Router, public authService: AuthenticationService) { }
 
 
   openFirst() {

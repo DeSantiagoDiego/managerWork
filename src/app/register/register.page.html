@@ -8,8 +8,9 @@
     <div id="register" class="scroll" scrollX="true">
         <p>Nickname</p>
         <input type="text" [(ngModel)]="nombre" (ngModelChange)="cambiaNombre($event)">
-        <p>Correo</p>
-        <input type="password">
+        <p>Correo electrónico</p>
+        <input type="text" [(ngModel)]="correo" #email required>
+        <h6 style="margin: auto; color: darkred;  font-style: italic;">Campo obligatorio</h6>
         <p>Clase</p>
         <ion-item>
             <ion-select [(ngModel)]="clase" (ngModelChange)="cambiaClase($event)" placeholder="Selecccionar clase          " interface="popover" class="custom-options">
@@ -18,9 +19,11 @@
             </ion-select>
         </ion-item>
         <p>Contraseña</p>
-        <input type="password">
+        <input type="password" #password required>
+        <h6 style="margin: auto; color: darkred; font-style: italic;">Campo obligatorio</h6>
         <p>Confirmar Contraseña</p>
-        <input type="text">
+        <input type="password" [(ngModel)]="confirmarContrasena">
+        <h6 style="margin: auto; color: darkred;  font-style: italic;">Campo obligatorio</h6>
         <p>Genero</p>
         <ion-item>
             <ion-select placeholder="Selecccionar genero          " interface="popover" class="custom-options">
@@ -49,7 +52,7 @@
         </div>
 
 
-        <button>
+        <button (click)="signUp(email, password)">
         <p id="ingresar">Registrarse</p>
       </button>
         <p class="opcionesLogin" (click)="toIngresar()">¿Ya tienes una cuenta?, Ingresa aqui!</p>

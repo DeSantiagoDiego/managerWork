@@ -27,6 +27,14 @@ const routes: Routes = [
     path: 'new-project',
     loadChildren: () => import('./new-project/new-project.module').then( m => m.NewProjectPageModule)
   },
+  {
+    path: 'verify-email',
+    loadChildren: () => import('./verify-email/verify-email.module').then( m => m.VerifyEmailPageModule)
+  },
+  {
+    path: 'password-recover',
+    loadChildren: () => import('./password-recover/password-recover.module').then( m => m.PasswordRecoverPageModule)
+  },
 ];
 
 @NgModule({

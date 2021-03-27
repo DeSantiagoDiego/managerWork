@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthenticationService } from "../shared/authentication-service";
 
 @Component({
   selector: 'app-register',
@@ -9,7 +10,11 @@ import { Router } from '@angular/router';
 export class RegisterPage implements OnInit {
   nombre: string;
   clase: string;
-  constructor(private router: Router) { }
+  correo: string;
+  confirmarContrasena: string;
+  constructor(
+    public authService: AuthenticationService,
+    private router: Router) { }
 
   ngOnInit() {
   }
@@ -39,4 +44,20 @@ export class RegisterPage implements OnInit {
     }
     
   }
+
+
+signUp(email, password){
+  if(password.value!= this.confirmarContrasena){
+    window.alert('Las contraseñas no coinciden')
+  }else{
+  this.authService.RegisterUser(email.value, password.value)
+  .then((res) => {
+    // Do something here
+    this.authService.SendVerificationMail()
+    this.router.navigate(['verify-email']);
+  }).catch((error) => {
+    window.alert(error.message)
+  })
+}
+}
 }

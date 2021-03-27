@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MenuController } from '@ionic/angular';
+import { AuthenticationService } from '../shared/authentication-service';
 
 @Component({
   selector: 'app-profile',
@@ -9,7 +10,7 @@ import { MenuController } from '@ionic/angular';
 })
 export class ProfilePage implements OnInit {
 
-  constructor(private menu: MenuController, private router: Router) { }
+  constructor(private menu: MenuController, private router: Router, public authService: AuthenticationService) { }
 
   ngOnInit() {
   }

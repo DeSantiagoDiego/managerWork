@@ -1,0 +1,21 @@
+<ion-header>
+    <ion-toolbar color="secondary">
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>upTask Rpg</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content color="primary">
+    <div>
+        <h2>Correo de verificación enviado</h2>
+        <p>
+
+            Revise su correo electrónico.
+        </p>
+        <ion-button type="submit" (click)="authService.SendVerificationMail()" expand="block">
+            Reenviar correo
+        </ion-button>
+    </div>
+</ion-content>

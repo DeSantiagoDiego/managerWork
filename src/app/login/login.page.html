@@ -6,14 +6,14 @@
 
 <ion-content color="primary">
     <div class="scroll" scrollX="true">
-        <p>Nickname</p>
-        <input type="text">
+        <p>Correo electrónico</p>
+        <input type="text" #email required>
         <p>Contraseña</p>
-        <input type="password">
-        <button (click)="ingresar()">
+        <input type="password" #password required>
+        <button (click)="logIn(email, password)">
           <p id="ingresar">Ingresar</p>
         </button>
         <p class="opcionesLogin" (click)="toRegister()">Registrarse</p>
-        <p class="opcionesLogin">¿Olvidaste tu contraseña?</p>
+        <p class="opcionesLogin" (click)="toPasswordRecover()">¿Olvidaste tu contraseña?</p>
     </div>
 </ion-content>
